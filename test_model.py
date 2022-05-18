@@ -11,7 +11,7 @@ later = tomorrow + timedelta(days=10)
 
 
 def test_allocating_to_a_batch_reduces_the_available_quantity():
-    batch = Batch("batch-001", "SMALL-TABLE", qty=20, eta=date.today())
+    batch = Batch("batch-001", "SMALL-TABLE", quantity=20, eta=date.today())
     line = OrderLine('order-ref', "SMALL-TABLE", 2)
 
     batch.allocate(line)
